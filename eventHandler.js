@@ -153,7 +153,7 @@ function setCurrentPlayback(room) {
 						currentDJTrack.progress_ms - currentTrack.progress_ms
 					);
 
-					if (!isSameTrack || timeDifferenceMs > 500) {
+					if (!isSameTrack || timeDifferenceMs > 2000) {
 						numRequests++;
 						const response = await setCurrentTrack(user, currentDJTrack);
 						if (
