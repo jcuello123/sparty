@@ -1,0 +1,48 @@
+@font-face {
+	font-family: "Rubik-One-Mono";
+	src: url("../Fonts/RubikMonoOne-Regular.ttf");
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	background-color: #131620;
+	font-family: "Rubik-One-Mono";
+	color: #ffffff;
+}
+
+.main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100vw;
+}
+
+.usersContainer {
+	width: 15vw;
+	height: 70vh;
+	border: 2px solid #ffffff;
+	border-radius: 3%;
+}
+
+#users {
+	list-style: none;
+	padding-left: 0;
+	text-align: center;
+}
+
+#users li:hover {
+	background-color: #8ebbc1;
+	cursor: pointer;
+}
+
+#room {
+	float: right;
+}
+
+.header {
+	position: absolute;
+	top: 2%;
+	right: 2%;
+	width: 96%;
+}

@@ -74,16 +74,19 @@ async function getCurrentTrack(user) {
 			is_playing: response.data.is_playing,
 		};
 	} catch (error) {
-		console.log(
-			`request error for getCurrentTrack for user ${user.username}:`,
-			error.response.data
-		);
+		if (error.response) {
+			console.log(
+				`request error for getCurrentTrack for user ${user.username}:`,
+				error.response.data
+			);
+			if (error.response.status === TOO_MANY_REQUESTS) {
+				return { error: error.response };
+			}
 
-		if (error.response.status === TOO_MANY_REQUESTS) {
-			return { error: error.response };
+			return { error: error.response.data };
+		} else {
+			console.log(error);
 		}
-
-		return { error: error.response.data };
 	}
 }
 
