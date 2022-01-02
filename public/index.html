@@ -2,13 +2,24 @@
 <html lang="en">
 <head>
     <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
     <script src="/scripts/joinRoom.js"></script>
 </head>
 <body>
-    <label for="username">Username</label>
-    <input id="username" type="text" required/>
-    <label for="room">Room</label>
-    <input id="room" type="text" required/>
-    <button onclick="join()">Join</button>
+    <div id="LogoAndTitle">
+        <img src="Logos/Spotify_Icon_RGB_White.png" alt="Logo" id="Logo">    
+        <h1>Sparty</h1>
+    </div>
+
+    <div>
+        <input id="username" type="text" placeholder="Username"/>
+    </div>
+
+    <div> 
+        <input id="room" type="text" placeholder="RoomID"/>
+    </div>
+    <div>    
+        <button onclick="join()">Join</button>
+    </div>
 </body>
 </html>
